@@ -1,0 +1,26 @@
+As I am new to android and trying to learn binder interface. I have written a demo
+server and client using some reference availbale.
+Few demo/test applications are available on internet that shows how client can connect with server using  
+binder that is a remote procedue call, but if there a need other way around and Server needs to
+give callback to a connected client on certain event then this example serves the purpose.
+
+This code will server as a template so no need to go deep in underlying mechanism and can be directly used.
+
+Compilation
+----------------------------------------------------------------
+It has a Android.mk file so after compiling using standard command it will create 
+helloserve and helloclient applications.
+
+How to run server client Application
+----------------------------------------------------------------
+1) Do adb shell and run server.
+   ie. ./helloserver
+2) Open new terminal and do adb shell and run client.
+   ie. ./helloclient
+3) When client runs it will set the callback in server, so server will have callback reference.
+4) Now go to terminal where server is running, enter a value. This server will call the client function
+sending specific value to client.
+
+Run it and play around it, it will give more understanding.
+
+ I hope that this code will help others from scratching their head a lot.
